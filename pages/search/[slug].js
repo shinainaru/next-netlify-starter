@@ -5,7 +5,7 @@ import Header from '@components/Header'
 const search = () => {
   const { asPath, pathname } = useRouter()
   return (
-  <div className="container>
+  <div>
       <Head>
         <title>Hasil Pencarian {asPath} </title>
       <Head />
