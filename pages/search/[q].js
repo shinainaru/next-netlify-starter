@@ -2,6 +2,7 @@ import axios from "axios"
 import Head from "next/head"
 import Header from '@components/Header'
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/router"
 
 function Search({ response }) {
@@ -31,6 +32,9 @@ function Search({ response }) {
                 priority={true}
               />
             </div>
+            <Link href={res.url} passHref>
+              <p className="truncate text-sm">{res.title}</p>
+            </Link>
           ))}
         </div>
       </div>
