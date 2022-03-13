@@ -1,11 +1,13 @@
 import '@styles/globals.css'
+import App from 'next/js'
 import Footer from '@components/Footer'
 
-function Application({ Component, pageProps }) {
-  return (
-    <Component {...pageProps} />
-    <Footer />
-  )
+export default class Application extends App {
+  render () {
+    const { Component, pageProps } = this.props
+    return (
+      <Component {...pageProps} />
+      <Footer />
+    )
+  }
 }
-
-export default Application
