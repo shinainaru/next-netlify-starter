@@ -1,6 +1,7 @@
 import axios from "axios"
 import Head from "next/head"
 import Header from '@components/Header'
+import Image from "next/image"
 import { useRouter } from "next/router"
 
 function Search({ response }) {
@@ -13,7 +14,11 @@ function Search({ response }) {
         <title>{q} · Mr.Cyser#R00t</title>
       </Head>
       <div className="max-w-full">
-        <h1>{response}</h1>
+        {response.data.map((res) => (
+          <Image
+            src={res.images.jpg.image_url}
+          />
+        ))}
       </div>
     </>
   )
