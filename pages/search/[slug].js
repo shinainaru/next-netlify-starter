@@ -1,23 +1,20 @@
-import { useRouter } from 'next/router';
-import Head from 'next/head'
+import Head from "next/head"
 import Header from '@components/Header'
+import { useRouter } from "next/router"
+import { useContext } from "react"
 
-const search = () => {
-  const { asPath, pathname } = useRouter()
+function Search() {
+  const context = useContext(AppContext)
+  const router = useRouter()
+
   return (
-  <div>
+    <>
       <Head>
-        <title>Hasil Pencarian {asPath} </title>
-      <Head />
-
-      <main>
-        <Header title="Hasil Pencarian {asPath}" />
-        <p className="description">
-          GOOD<code>pages/search/index.js</code>
-        </p>
-      </main>
-    </div>
+        <title>{router.query.q} · Mr.Cyser#R00t</title>
+      </Head>
+      <Header title="tch" />
+    </>
   )
 }
 
-export default search
+export default Search
