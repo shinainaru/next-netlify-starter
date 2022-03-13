@@ -21,8 +21,8 @@ function Search({ response }) {
 
 
 export async function getServerSideProps(context) {
-  const { q } = context.params
-  const request = await axios.get(`https://api.jikan.moe/v4/anime?q=${q}`)
+  const query = context.params.q
+  const request = await axios.get(`https://api.jikan.moe/v4/anime?q=${query}`)
   const response = request.data
   return {
     props: {
