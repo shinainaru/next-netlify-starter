@@ -3,12 +3,12 @@ import Header from '@components/Header'
 import { useRouter } from "next/router"
 
 function Search() {
-  const router = useRouter()
+  const { asPath } = useRouter()
 
   return (
     <>
       <Head>
-        <title>{router.query.q} · Mr.Cyser#R00t</title>
+        <title>{asPath} · Mr.Cyser#R00t</title>
       </Head>
       <Header title="tch" />
     </>
