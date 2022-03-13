@@ -7,7 +7,6 @@ export default class Application extends App {
     const { Component, pageProps } = this.props
     return (
       <Component {...pageProps} />
-      <Footer />
     )
   }
 }
