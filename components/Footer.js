@@ -7,7 +7,7 @@ export default function Footer() {
         <ul className={styles.footer__redes-wrapper}>
           <li>
             <a href="//youtube.com/Teokure" className={styles.footer__link}>
-              <i className={`${fab} ${fa-youtube}`}></i>
+              <i className={[styles.fab, styles['fa-youtube'].join(" ")}></i>
                 YouTube
             </a>
           </li>
