@@ -36,7 +36,7 @@ function Search({ response }) {
                 </a>
               </Link>
               <Link href={`${res.url}`}>
-                <p className="truncate text-sm">{res.title}</p>
+                <p className="truncate p-2">{res.title}</p>
               </Link>
             </div>
           ))}
