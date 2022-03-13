@@ -21,20 +21,24 @@ function Search({ response }) {
               key={res.mal_id}
               className="group cursor-pointer overflow-hidden rounded-xl border-b-2 border-b-transparent bg-slate-800 hover:border-b-rose-700"
             >
-              <Image
-                src={res.images.jpg.image_url}
-                alt={res.title}
-                width={225}
-                height={320}
-                layout="responsive"
-                objectFit="cover"
-                className="transition duration-300 ease-in-out group-hover:scale-110"
-                priority={true}
-              />
+              <Link href={`${res.url}`} passHref>
+                <a>
+                  <Image
+                    src={res.images.jpg.image_url}
+                    alt={res.title}
+                    width={225}
+                    height={320}
+                    layout="responsive"
+                    objectFit="cover"
+                    className="transition duration-300 ease-in-out group-hover:scale-110"
+                    priority={true}
+                  />
+                </a>
+              </Link>
+              <Link href={`${res.url}`}>
+                <p className="truncate text-sm">{res.title}</p>
+              </Link>
             </div>
-            <Link href={`${res.url}`}>
-              <p className="truncate text-sm">{res.title}</p>
-            </Link>
           ))}
         </div>
       </div>
