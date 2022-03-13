@@ -32,7 +32,7 @@ function Search({ response }) {
                 priority={true}
               />
             </div>
-            <Link href={`${res.url}`} passHref>
+            <Link href={`${res.url}`}>
               <p className="truncate text-sm">{res.title}</p>
             </Link>
           ))}
