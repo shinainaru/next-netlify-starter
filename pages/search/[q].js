@@ -19,14 +19,8 @@ function Search({ response }) {
   )
 }
 
-export const getStaticPaths = async () => {
-  return {
-    paths: [], //indicates that no page needs be created at build time
-    fallback: 'blocking' //indicates the type of fallback
-  }
-}
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const request = await axios.get(`https://api.jikan.moe/v4/anime?q=${query.q}`)
   const response = request.data
 
