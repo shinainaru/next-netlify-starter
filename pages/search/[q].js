@@ -1,3 +1,4 @@
+8
 import axios from "axios"
 import Head from "next/head"
 import Header from '@components/Header'
@@ -14,11 +15,23 @@ function Search({ response }) {
         <title>{q} · Mr.Cyser#R00t</title>
       </Head>
       <div className="max-w-full">
-        {response.data.map((res) => (
-          <Image
-            src={res.images.jpg.image_url}
-          />
-        ))}
+        <div className="mt-2 grid w-full grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 md:gap-3 lg:grid-cols-7">
+          {response.data.map((res) => (
+            <div
+              key={res.mal_id}
+              className="group cursor-pointer overflow-hidden rounded-xl border-b-2 border-b-transparent bg-slate-800 hover:border-b-rose-700"
+            >
+              <Image
+                src={res.images.jpg.image_url}
+                alt={res.title}
+                layout="responsive"
+                objectFit="cover"
+                className="transition duration-300 ease-in-out group-hover:scale-110"
+                priority={true}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   )
