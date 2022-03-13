@@ -4,11 +4,11 @@ import { useRouter } from "next/router"
 
 function Search() {
   const { asPath } = useRouter()
-
+  const query = decodeURIComponent(asPath.split('/')[1])
   return (
     <>
       <Head>
-        <title>{asPath} · Mr.Cyser#R00t</title>
+        <title>{query} · Mr.Cyser#R00t</title>
       </Head>
       <Header title="tch" />
     </>
