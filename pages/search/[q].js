@@ -20,12 +20,12 @@ function Search({ response }) {
 }
 
 
-export async function getServerSideProps() {
-  const request = await axios.get(`https://api.jikan.moe/v4/anime?q=${query.q}`)
-  const response = request.data
-
+export async function getServerSideProps(context) {
+  const response = context.params.q
   return {
-    props: { response }
+    props: {
+      response
+    }
   }
 }
 
