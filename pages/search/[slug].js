@@ -1,10 +1,8 @@
 import Head from "next/head"
 import Header from '@components/Header'
 import { useRouter } from "next/router"
-import { useContext } from "react"
 
 function Search() {
-  const context = useContext(AppContext)
   const router = useRouter()
 
   return (
