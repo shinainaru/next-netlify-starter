@@ -1,13 +1,15 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head'
 
-export default function Search() {
-  const { asPath } = useRouter();
+const search = () => {
+  const { asPath, pathname } = useRouter();
   return (
-    <div className="container">
+    <>
       <Head>
-        <title> Hasil Pencarian {asPath} - angga-buat-web.netlify.app </title>
+        <title>Hasil Pencarian {asPath} </title>
       <Head />
-    </div>
-  )
+    </>
+  );
 }
+
+export default search;
