@@ -1,4 +1,3 @@
-8
 import axios from "axios"
 import Head from "next/head"
 import Header from '@components/Header'
@@ -24,6 +23,8 @@ function Search({ response }) {
               <Image
                 src={res.images.jpg.image_url}
                 alt={res.title}
+                width={225}
+                height={320}
                 layout="responsive"
                 objectFit="cover"
                 className="transition duration-300 ease-in-out group-hover:scale-110"
