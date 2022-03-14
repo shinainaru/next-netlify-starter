@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function Navbar() {
   const [showNav, setShowNav] = useState(true)
   function handleToggle(e) {
-    setshowNav(prevState => !prevState);
+    setShowNav(prevState => !prevState);
   }
   const navigation = [
     { link: '#', text: 'Link 1' },
