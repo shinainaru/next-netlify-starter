@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Link from "next/link"
+import { useMediaQuery } from "react-responsive"
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(true)
