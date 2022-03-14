@@ -38,7 +38,7 @@ export default function Navbar() {
                 </a>
               </li>
             </ul>
-            )) : ''}
+            ) : '')}
           </div>
         </div>
       </nav>
