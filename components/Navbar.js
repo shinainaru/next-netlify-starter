@@ -15,7 +15,7 @@ export default function Navbar() {
   const GenerateNav = ({ value }) => {
     return (
       <>
-        <ul class="hidden md:block flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+        <ul class="hidden flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
           {navigation.map(nav => (
             <li key={nav.text}>
               <Link href={nav.link}>
