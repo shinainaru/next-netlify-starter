@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Header from '@components/Header'
-import Footer from '@components/Footer'
 
 export default function Home() {
   return (
@@ -14,8 +13,6 @@ export default function Home() {
         <Header title="Yo! You get anime hentai" />
         Setiap hari kerjaannya hanya coli. Sampe kontolnya sakit
       </main>
-
-      <Footer />
     </div>
   )
 }
