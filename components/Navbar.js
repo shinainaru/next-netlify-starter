@@ -37,8 +37,7 @@ export default function Navbar() {
                 Onii-chan
                 </a>
               </li>
-            </ul>
-            ) : '')}
+            </ul> : ''}
           </div>
         </div>
       </nav>
