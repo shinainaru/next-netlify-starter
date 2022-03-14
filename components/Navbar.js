@@ -14,8 +14,8 @@ export default function Navbar() {
 
   const GenerateNav = ({ value }) => {
     return (
-      <>
-        <ul class="hidden flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+      <div class="hidden md:block">
+        <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
           {navigation.map(nav => (
             <li key={nav.text}>
               <Link href={nav.link}>
@@ -26,7 +26,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-      </>
+      </div>
     );
   }
 
