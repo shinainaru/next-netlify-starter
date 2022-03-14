@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
   const isMd = useMediaQuery({ query: "(min-width: 768px)" })
   const isLg = useMediaQuery({ query: "(min-width: 1024px)" })
-  const mediaQuery = isLg || isSm ? <GenerateNav value={navigation} /> : ''
+  const mediaQuery = isLg || isMd ? <GenerateNav value={navigation} /> : ''
 
   const GenerateNav = ({ value }) => {
     return (
