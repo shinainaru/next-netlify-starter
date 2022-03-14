@@ -11,7 +11,8 @@ export default function Navbar() {
     { link: '/search', text: 'Search' },
   ];
   const GenerateNav = ({ value }) => {
-    return(
+    return (
+      <>
       {navigation.map(nav => (
         <li key={nav.text}>
           <Link href={nav.link}
@@ -21,6 +22,7 @@ export default function Navbar() {
           </Link>
         </li>
       ))}
+      </>
     );
   }
 
