@@ -1,6 +1,5 @@
 import { useState } from "react"
 import Link from "next/link"
-import { useMediaQuery } from "react-responsive"
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(true)
@@ -8,6 +7,7 @@ export default function Navbar() {
     setShowNav(prevState => !prevState);
   }
   const navigation = [
+    { link: '/', text: 'Home'},
     { link: '/search', text: 'Search' },
   ];
   
