@@ -21,7 +21,7 @@ export default function Navbar() {
           {navigation.map(nav => (
             <li key={nav.text}>
               <Link href={nav.link}>
-                <a class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                <a class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                   {nav.text}
                 </a>
               </Link>
@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav class="border-gray-200 px-2 sm:px-4 py-2.5 rounded bg-gray-700 dark:bg-gray-800">
+      <nav class="border-gray-200 px-2 sm:px-4 py-2.5 rounded bg-gray-800 dark:bg-gray-800">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
           <a href="#" class="flex items-center">
             <img src="/netliheart.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
@@ -51,7 +51,7 @@ export default function Navbar() {
                 <li key={nav.text}>
                   <Link href={nav.link}>
                     <a onClick={handleToggle}
-                   class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                   class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >
                   {nav.text}</a>
                   </Link>
