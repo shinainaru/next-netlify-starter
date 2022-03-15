@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
 
-function Search({ response }) {
+function GetGenre() {
   const router = useRouter()
   const genreList = ['anal', 'milf']
   const { genre } = router.query
@@ -12,3 +12,4 @@ function Search({ response }) {
     </>
   )
 }
+export default GetGenre
