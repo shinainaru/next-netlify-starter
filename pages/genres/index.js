@@ -4,7 +4,11 @@ import Link from "next/link"
 export default function Genres() {
   const genre = [
     { link: '/genres/milf', text: 'Milf'},
-    { link: '/genres/anal', text: 'Anal' },
+    { link: '/genres/monster', text: 'Monster' },
+    { link: '/genres/action', text: 'Action' },
+    { link: '/genres/comedy', text: 'Comedy' },
+    { link: '/genres/elf', text: 'Elf' },
+    { link: '/genres/tsundere', text: 'Tsundere'}
   ].sort(function(a, b){
     var nameA = a.text.toLowerCase(), nameB = b.text.toLowerCase();
     if (nameA < nameB)
