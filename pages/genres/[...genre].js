@@ -6,12 +6,14 @@ function GetGenre() {
   const router = useRouter()
   const genreList = ['anal', 'milf']
   const { genre } = router.query
-  
+  const GenerateNav = ({ value }) => {
+    genre.includes(genreList) ? {value} : <NotFound />
+  }
   return (
     <>
-      {genre.inculdes(genreList) ? 
-        <h1>FOUND: {genre} </h1>
-        : <NotFound />}
+      <AllowGenre value={(
+        <h1>WORK BRO THANKS </h1>
+      )} />
     </>
   )
 }
