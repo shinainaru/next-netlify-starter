@@ -6,7 +6,7 @@ function GetGenre() {
   const router = useRouter()
   const genreList = ['anal', 'milf']
   const { genre } = router.query
-  const GenerateNav = ({ value }) => {
+  const AllowGenre = ({ value }) => {
     genre.includes(genreList) ? {value} : <NotFound />
   }
   return (
