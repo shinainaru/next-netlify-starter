@@ -10,6 +10,7 @@ export default function Navbar() {
   const hide = () => setshowNav(false);
   const show = () => setshowNav(true);
   const navigation = [
+    { link: '/genres', text: 'Genres' },
     { link: '/', text: 'Home'},
     { link: '/search', text: 'Search' },
   ].sort(function(a, b){
