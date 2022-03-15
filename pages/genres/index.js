@@ -27,7 +27,7 @@ export default function Genres() {
               key={res.text}
               className="group cursor-pointer overflow-hidden rounded-xl border-b-2 border-b-transparent bg-slate-800 hover:border-b-rose-700"
             >
-              <Link href={`${res.url}`} passHref>
+              <Link href={`${res.link}`} passHref>
                 <h2 className="truncate p-2 break-all">{res.text}</h2>
               </Link>
             </div>
