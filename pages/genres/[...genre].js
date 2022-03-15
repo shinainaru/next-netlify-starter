@@ -7,7 +7,11 @@ function GetGenre() {
   const genreList = ['anal', 'milf']
   const { genre } = router.query
   const AllowGenre = ({ value }) => {
-    genre.includes(genreList) ? {value} : <NotFound />
+    if (genre && genre.includes(genreList)) {
+      {value}
+    } else {
+      <NotFound />
+    }
   }
   return (
     <>
