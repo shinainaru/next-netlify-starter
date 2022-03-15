@@ -14,7 +14,7 @@ export default GetGenre
 export const getServerSideProps = async (context) => {
   const { genre } = context.query;
   const genreList = ['anal', 'milf']
-  if (!genre || !genreList.includes(genre.toLowerCase())) {
+  if (!genre || !genreList.includes(genre.toString().toLowerCase())) {
     return {
       redirect: {
         permanent: false,
