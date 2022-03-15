@@ -5,7 +5,15 @@ export default function Genres() {
   const genre = [
     { link: '/genres/milf', text: 'Milf'},
     { link: '/genres/anal', text: 'Anal' },
-  ];
+  ].sort(function(a, b){
+    var nameA = a.text.toLowerCase(), nameB = b.text.toLowerCase();
+    if (nameA < nameB)
+      return -1;
+    if (nameA > nameB)
+      return 1;
+    return 0;
+  });
+
   return (
     <>
       <Head>
