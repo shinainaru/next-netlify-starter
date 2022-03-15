@@ -9,7 +9,9 @@ function GetGenre() {
   
   return (
     <>
-      {genre}
+      {genre.inculdes(genreList) ? 
+        <h1>FOUND: {genre} </h1>
+        : <NotFound />}
     </>
   )
 }
