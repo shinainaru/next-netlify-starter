@@ -1,11 +1,12 @@
 import { useRouter } from "next/router"
 
 function IndexSearch() {
-  const { pathname, query } = useRouter()
-  
+  const { asPath, query } = useRouter()
+  console.log(query)
+  console.log(asPath)
   return (
     <>
-      <h1>Path: {pathname} Query: {query}</h1>
+      <h1>Path: {asPath} Query: {query}</h1>
     </>
   )
 }
