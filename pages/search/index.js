@@ -1,22 +1,45 @@
+import axios from "axios"
+import Head from "next/head"
+import Header from '@components/Header'
+import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/router"
 
-function IndexSearch({}) {
+function IndexSearch({ response }) {
   const router = useRouter()
+  const { q } = router.query
 
   return (
     <>
-      <div class="flex items-center justify-center">
-        <div class="flex border-2 rounded">
-          <form>
-            <input type="text" class="px-4 py-2 w-80" placeholder="Search..." />
-            <button class="flex items-center justify-center px-4 border-l" type="submit">
-              <svg class="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24">
-                  <path
-                      d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
-              </svg>
-            </button>
-          </form>
+      <Head>
+        <title>{q} · Mr.Cyser#R00t</title>
+      </Head>
+      <div className="max-w-full">
+        <div className="mt-2 grid w-full grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 md:gap-3 lg:grid-cols-7">
+          {response.data.map((res) => (
+            <div
+              key={res.mal_id}
+              className="group cursor-pointer overflow-hidden rounded-xl border-b-2 border-b-transparent bg-slate-800 hover:border-b-rose-700"
+            >
+              <Link href={`${res.url}`} passHref>
+                <a>
+                  <Image
+                    src={res.images.jpg.image_url}
+                    alt={res.title}
+                    width={225}
+                    height={320}
+                    layout="responsive"
+                    objectFit="cover"
+                    className="transition duration-300 ease-in-out group-hover:scale-110"
+                    priority={true}
+                  />
+                </a>
+              </Link>
+              <Link href={`${res.url}`}>
+                <h2 className="truncate p-2 break-all">{res.title}</h2>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </>
@@ -26,16 +49,14 @@ function IndexSearch({}) {
 
 export async function getServerSideProps(context) {
   const query = context.params.q
-  if (query) {
-    context.res.redirect('/search/' + query)
-  }
+  const request = await axios.get(`https://api.jikan.moe/v4/anime?q=${query}`)
+  const response = request.data
   return {
     props: {
+      response
     }
   }
 }
 
 
-
 export default IndexSearch
-
