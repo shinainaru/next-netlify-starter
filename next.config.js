@@ -7,8 +7,15 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/search?q=:slug',
-        destination: '/search/:slug', // Matched parameters can be used in the destination
+        source: '/search',
+        has: [
+          {
+            type: 'query',
+            key: 'q',
+            value: '(?<id>.*)',
+          },
+          {
+        destination: '/search/:q', // Matched parameters can be used in the destination
       },
     ]
   },
