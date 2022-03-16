@@ -6,7 +6,7 @@ function IndexSearch() {
   console.log(asPath)
   return (
     <>
-      <h1>Path: {asPath} Query: {query}</h1>
+      <h1>You get RickRolled</h1>
     </>
   )
 }
