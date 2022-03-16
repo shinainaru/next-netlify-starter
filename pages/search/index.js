@@ -27,10 +27,10 @@ export default IndexSearch
 
 export async function getServerSideProps(context) {
 
-  const { asPath, query, push } = context
-  const arah = asPath && asPath.match("/search") && query && query.q
+  const { req, res, params } = context
+  const arah = req.url && req.url.match("/search") && params && params.q
   if (arah) {
-    context.res.setHeader('Location', '/search/' + query.q)
+    res.setHeader('Location', '/search/' + params.q)
   }
 
   return {
