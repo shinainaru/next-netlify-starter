@@ -3,9 +3,10 @@ import { useRouter } from "next/router"
 function IndexSearch() {
   const { pathname, query } = useRouter()
   return (
+    <>
+    <h1>Path: {pathname} Query: {query}</h1>
     <div class="flex items-center justify-center">
       <div class="flex border-2 rounded">
-          <h1>Path: {pathname} Query: {query}</h1>
           <input type="text" class="px-4 py-2 w-80" placeholder="Search..." />
           <button class="flex items-center justify-center px-4 border-l">
               <svg class="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +17,7 @@ function IndexSearch() {
           </button>
       </div>
     </div>
+    </>
   )
 }
 export default IndexSearch
