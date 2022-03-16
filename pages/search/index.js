@@ -1,15 +1,15 @@
 import { useRouter } from "next/router"
 
 function IndexSearch() {
-  const { asPath, query } = useRouter()
-  setTimeout(() => {
-    console.log(query)
-    console.log(asPath)
-  }, 1000 * 60 * 1.3)
+  const { asPath, query, push } = useRouter()
+  if (asPath.match("/search") && query && query.q) {
+    push('/search/' + query.q)
+  }
   
   return (
     <>
-      <h1>You get RickRolled</h1>
+      <h3>Error 403</h3>
+      <p>Kamu akan di alihkan ke halaman /search/QUERY </p>
     </>
   )
 }
