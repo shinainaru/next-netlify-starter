@@ -1,12 +1,17 @@
 import Link from "next/link"
+import {useEffect, useState} from "react";
 
 function IndexSearch() {
+  const [query, setQuery] = useState(null)
+  useEffect(() => {
+    setQuery(document.getElementById('search').value)
+  }, [])
   return (
     <>
       <div class="flex items-center justify-center">
         <div class="flex border-2 rounded">
           <input type="text" id="search" class="px-4 py-2 w-80" placeholder="Search..." />
-          <Link href={`/search/${document.getElementById('search').value}`} passHref>
+          <Link href={`/search/${query}`} passHref>
             <button class="flex items-center justify-center px-4 border-l">
                 <svg class="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24">
