@@ -4,21 +4,6 @@ const nextConfig = {
   images: {
     domains: ["cdn.myanimelist.net"],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/search',
-        has: [
-          {
-            type: 'query',
-            key: 'q',
-            value: '(?<q>.*)',
-          }
-        ],
-        destination: '/search/:q', // Matched parameters can be used in the destination
-      },
-    ]
-  },
 }
 
 module.exports = nextConfig
