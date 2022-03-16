@@ -7,12 +7,12 @@ import { useRouter } from "next/router"
 
 function Search({ response }) {
   const router = useRouter()
-  const { search } = router.query
+  const { q } = router.query
 
   return (
     <>
       <Head>
-        <title>{search} · Mr.Cyser#R00t</title>
+        <title>{q} · Mr.Cyser#R00t</title>
       </Head>
       <div className="max-w-full">
         <div className="mt-2 grid w-full grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 md:gap-3 lg:grid-cols-7">
@@ -48,8 +48,8 @@ function Search({ response }) {
 
 
 export async function getServerSideProps(context) {
-  const query = context.params.search
-  const request = await axios.get(`https://api.jikan.moe/v4/anime?q=${search}`)
+  const query = context.params.q
+  const request = await axios.get(`https://api.jikan.moe/v4/anime?q=${query}`)
   const response = request.data
   return {
     props: {
