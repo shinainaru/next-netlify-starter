@@ -28,9 +28,10 @@ export default IndexSearch
 export async function getServerSideProps(context) {
 
   const { req, res, params } = context
+  console.log(req, res, params)
   const arah = req.url && req.url.match("/search") && params && params.q
   if (arah) {
-    res.setHeader('Location', '/search/' + params.q)
+    context.res.redirect('/search/' + params.q)
   }
 
   return {
