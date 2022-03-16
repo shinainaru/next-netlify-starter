@@ -6,7 +6,7 @@ function IndexSearch() {
   const router = useRouter()
   return (
     <>
-      <div class="flex items-center justify-center bg-slate-900">
+      <div class="container flex flex-wrap items-center justify-center bg-slate-900 mx-auto">
         <div class="flex border-2 rounded border-gray-800 bg-gray-900">
           <input type="text" onKeyDown={() => router.push('/search/' + query)} onChange={(e) => setQuery(e.target.value)} class="px-4 py-2 w-80 md:w-50 text-gray" placeholder="Search..." />
           <button onClick={() => router.push('/search/' + query)} class="flex items-center justify-center px-4 border-l">
