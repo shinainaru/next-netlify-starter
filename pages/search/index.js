@@ -29,7 +29,7 @@ export async function getServerSideProps(context) {
 
   const req = context.req
   const res = context.res
-  const { q } = context.params
+  const q = context.params.q
   console.log(req.url, q)
   const arah = req.url && req.url.match("/search") && context.params && q
   if (arah) {
