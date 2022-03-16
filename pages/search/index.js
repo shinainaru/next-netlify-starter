@@ -1,7 +1,7 @@
-import Router from "next/router"
+import { useRouter } from "next/router"
 
 function IndexSearch() {
-  const { pathname, query } = Router
+  const { pathname, query } = useRouter()
   return (
     <div class="flex items-center justify-center">
       <div class="flex border-2 rounded">
