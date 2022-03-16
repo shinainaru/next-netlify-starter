@@ -8,7 +8,7 @@ function IndexSearch() {
     <>
       <div class="flex items-center justify-center">
     <div class="flex rounded">
-        <input onKeyDown={() => router.push('/search/' + query)} onChange={(e) => setQuery(e.target.value)} type="text" class="px-4 py-2 w-80" placeholder="Search...">
+        <input onKeyDown={() => router.push('/search/' + query)} onChange={(e) => setQuery(e.target.value)} type="text" class="px-4 py-2 w-80" placeholder="Search..." />
         <button onClick={() => router.push('/search/' + query)}  class="flex items-center justify-center px-4 border-l">
             <svg class="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24">
