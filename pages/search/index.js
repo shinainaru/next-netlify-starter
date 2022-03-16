@@ -32,7 +32,7 @@ export async function getServerSideProps(context) {
   const req = context.req
   const res = context.res
   console.log(req.url, query)
-  const arah = req.url && req.url.match("/search") && context.params.q && query
+  const arah = req.url && req.url.match("/search") && query
   if (arah) {
     res.redirect('/search/' + query)
   } else {
