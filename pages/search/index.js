@@ -25,20 +25,17 @@ function IndexSearch({ query }) {
   )
 }
 
-export default IndexSearch
 
 export async function getServerSideProps(context) {
   const query = context.params.q
-  
-  if (query) {
-    context.res.redirect('/search/' + query)
-  } else {
-    console.log(query)
-  }
-
   return {
     props: {
       query
     }
   }
 }
+
+
+
+export default IndexSearch
+
