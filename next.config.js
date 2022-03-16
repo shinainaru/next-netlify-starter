@@ -12,7 +12,7 @@ const nextConfig = {
           {
             type: 'query',
             key: 'q',
-            value: '(?<id>.*)',
+            value: '(?<q>.*)',
           }
         ],
         destination: '/search/:q', // Matched parameters can be used in the destination
