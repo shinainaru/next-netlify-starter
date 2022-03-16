@@ -1,9 +1,11 @@
 import { useRouter } from "next/router"
 
-function IndexSearch({ query }) {
+function IndexSearch({ arah }) {
+  const router = useRouter()
+
   return (
     <>
-      {query && (
+      {arah && (
       <div class="flex items-center justify-center">
         <div class="flex border-2 rounded">
           <form>
@@ -26,21 +28,20 @@ function IndexSearch({ query }) {
 export default IndexSearch
 
 export async function getServerSideProps(context) {
-
+  const query = context.params.q
   const req = context.req
   const res = context.res
-  const q = context.params.q
-  console.log(req.url, q)
-  const arah = req.url && req.url.match("/search") && context.params && q
+  console.log(req.url, query)
+  const arah = req.url && req.url.match("/search") && context.params.q && query
   if (arah) {
-    res.redirect('/search/' + q)
+    res.redirect('/search/' + query)
   } else {
     console.log(arah)
   }
 
   return {
     props: {
-      query: arah
+      arah
     }
   }
 }
