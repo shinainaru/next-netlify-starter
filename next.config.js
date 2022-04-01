@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ["cdn.myanimelist.net"],
   },
+  future: {
+    webpack5: true
+  }
 }
 
 module.exports = nextConfig
