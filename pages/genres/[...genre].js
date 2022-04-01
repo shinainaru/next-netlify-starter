@@ -15,7 +15,7 @@ export default GetGenre
 export const getServerSideProps = async (context) => {
   const { genre } = context.query;
   const respon = await searchGenre(genre)
-  if (!genre || respon.data.length < 1)) {
+  if (!genre || respon.data.length < 1) {
     return {
       redirect: {
         permanent: false,
