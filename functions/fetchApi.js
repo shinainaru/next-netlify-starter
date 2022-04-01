@@ -1,12 +1,8 @@
 import axios from "axios"
 
-const baseAPIUrl = () => {
-  return "http://animek.eu-4.evennode.com/"
-}
-
 const searchAnime = async (query) => {
   try {
-    const request = await axios.get(`${baseAPIUrl}search/${query}`)
+    const request = await axios.get(`http://animek.eu-4.evennode.com/search/${query}`)
     const response = request.data
 
     return response
@@ -15,4 +11,4 @@ const searchAnime = async (query) => {
   }
 }
 
-export { baseAPIUrl, searchAnime }
+export { searchAnime }
