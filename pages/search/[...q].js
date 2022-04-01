@@ -50,8 +50,7 @@ function Search({ response }) {
 
 export async function getServerSideProps(context) {
   const query = context.params.q
-  const request = await searchAnime(query)
-  const response = request.data
+  const response = await searchAnime(query)
   return {
     props: {
       response
