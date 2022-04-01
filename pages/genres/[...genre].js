@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
 import NotFound from "@components/NotFound"
-import { searchGenre } from "../functions/fetchApi"
+import { searchGenre } from "../../functions/fetchApi"
 
 function GetGenre({ respon }) {
   return (
