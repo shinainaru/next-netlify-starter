@@ -19,14 +19,14 @@ function Search({ response }) {
         <div className="mt-2 grid w-full grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 md:gap-3 lg:grid-cols-7">
           {response.data.map((res) => (
             <div
-              key={res.mal_id}
+              key={res._id}
               className="group cursor-pointer overflow-hidden rounded-xl border-b-2 border-b-transparent bg-slate-800 hover:border-b-rose-700"
             >
-              <Link href={`${res.url}`} passHref>
+              <Link href={`${res.title.romaji}`} passHref>
                 <a>
                   <Image
-                    src={res.images.jpg.image_url}
-                    alt={res.title}
+                    src={res.images.jpg.image_url || "https://api.yimian.xyz/img/"}
+                    alt={res.title.romaji}
                     width={225}
                     height={320}
                     layout="responsive"
@@ -36,8 +36,8 @@ function Search({ response }) {
                   />
                 </a>
               </Link>
-              <Link href={`${res.url}`}>
-                <h2 className="truncate p-2 break-all">{res.title}</h2>
+              <Link href={`${res._id}`}>
+                <h2 className="truncate p-2 break-all">{res.title.romaji}</h2>
               </Link>
             </div>
           ))}
