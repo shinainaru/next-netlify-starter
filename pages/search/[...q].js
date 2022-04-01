@@ -4,7 +4,7 @@ import Header from '@components/Header'
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { searchAnime } from "@functions/fetchApi"
+import { searchAnime } from "../../functions/fetchApi"
 
 function Search({ response }) {
   const router = useRouter()
