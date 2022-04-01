@@ -25,7 +25,7 @@ function Search({ response }) {
               <Link href={`${res.title.romaji}`} passHref>
                 <a>
                   <Image
-                    src={res.images.jpg.image_url || "https://api.yimian.xyz/img/"}
+                    src="https://api.yimian.xyz/img/"
                     alt={res.title.romaji}
                     width={225}
                     height={320}
