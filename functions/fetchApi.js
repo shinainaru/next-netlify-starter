@@ -11,4 +11,4 @@ const searchAnime = async (query) => {
   }
 }
 
-export { searchAnime }
+export default { searchAnime }
