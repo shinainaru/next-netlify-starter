@@ -1,6 +1,8 @@
 import axios from "axios"
 
-const baseAPIUrl = "http://animek.eu-4.evennode.com/"
+const baseAPIUrl = () => {
+  return "http://animek.eu-4.evennode.com/"
+}
 
 const searchAnime = async (query) => {
   try {
