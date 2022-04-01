@@ -4,6 +4,7 @@ import Header from '@components/Header'
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { searchAnime } from "../functions/fetchApi"
 
 function Search({ response }) {
   const router = useRouter()
@@ -49,7 +50,7 @@ function Search({ response }) {
 
 export async function getServerSideProps(context) {
   const query = context.params.q
-  const request = await axios.get(`https://api.jikan.moe/v4/anime?q=${query}`)
+  const request = await searchAnime(query)
   const response = request.data
   return {
     props: {
