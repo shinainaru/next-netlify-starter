@@ -11,6 +11,14 @@ const searchAnime = async (query) => {
     console.error(error)
   }
 }
+const infoAnime = async (query) => {
+  try {
+    const { data } = await axios.get(`${baseAPIUrl}info/${query}`)
+    return data
+  } catch (e) {
+    console.error(e)
+  }
+}
 const searchGenre = async (query) => {
   try {
     const { data } = await axios.get(`${baseAPIUrl}genre/${query}`)
